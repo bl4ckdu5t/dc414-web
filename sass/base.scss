@@ -1,0 +1,149 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass";
+@import "breakpoint";
+@import "mixins";
+@import "compass/typography/vertical_rhythm";
+//@import "grids";
+@import "variables";
+@import "fonts";
+@import "h5bp";
+$color-darktheme: #eee;
+$background-darktheme-outter: #222;
+$background-darktheme-inner: #444;
+$border-darktheme: #999;
+$defcon-green: #c3da4c;
+$nav-height: 30px;
+* { @include box-sizing(border-box); }
+a{ text-decoration: none; color: inherit; }
+html{
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+	font-size: 62.5%;
+}
+body{
+	margin: 0;
+	background: url('../images/bg.png');//$background-darktheme-outter;
+	color: $color-darktheme;
+	font-family: $font-stack;
+	font-size: 1.6em;
+	font-weight: 300;
+}
+*:focus{ outline: 3px solid rgba(62, 184, 179, $reg_alpha); }
+::selection{ background: #999; color: white; }
+
+.container{
+	width: 1200px;
+	margin: 0 auto;
+	nav{
+		width: 100%;
+		background: rgba($black,.5);
+		height: $nav-height;
+		border-radius: 0 0 5px 5px;
+		text-shadow: 0 0 15px $defcon-green;
+		border: solid thin $defcon-green;//$border-darktheme;
+		border-top: 0;
+		>ul{
+			padding: 3px;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			>li{
+				display: inline;
+				position: relative;
+				padding: 10px 30px 5px 30px;
+				&:hover > ul{
+					transition: 1s;
+					transform: scale(1);
+					display: block;
+				}
+				}
+				ul{
+					position: absolute;
+					z-index: 1000;
+					top: $nav-height + 7px;
+					width: 100%;
+					border: solid thin $defcon-green;
+					border-radius: 0 0 5px 5px;
+					display: none;
+					transform: scale(0.8);
+					li{
+						text-align: center;
+						background: rgba($black, .8);
+						a{
+							display: block;
+							padding: 5px;
+						}
+					}
+				}
+			li{
+				a:hover{
+					color: $defcon-green;
+			}
+			}
+		}
+	}
+	header{
+		background: url(../images/dc414.png) center no-repeat;
+		background-size: 200px;
+		width: 100%;
+		height: 250px;
+		position: relative;
+		img{
+			position: absolute;
+			right: 0;
+			bottom: -25px;
+			z-index: -1;
+		}
+	}
+}
+.page{
+	h1{
+		font-weight: 400;
+		text-align: center;
+		background: rgba(0, 0, 0, .5);
+		border-radius: 5px 5px 0 0;
+		padding: 10px;
+		text-transform: uppercase;
+		font-size: 20px;
+		letter-spacing: .5em;
+		position: relative;
+		span{
+			position: absolute;
+			font-size: .7em;
+			letter-spacing: 0;
+			right: 10px;
+			bottom: 10px;
+			color: rgba(#eee, .5);
+		}
+	}
+	article{
+		background: rgba($background-darktheme-inner, .5);
+		padding: 20px 10px;
+		h2{
+			font-size: 1.5em;
+			text-shadow: 0 2px 3px $black;
+			margin: 0 0 10px 0;
+		}
+		p{
+			margin: 10px 0 10px 0;
+			img{
+				display: block;
+				margin: 0 auto;
+				width: 600px;
+				height: auto;
+				border: solid medium rgba(#aaa,.5);
+			}
+		}
+		a{color: $defcon-green;}
+
+	}
+}
+.separator{background: #888; height: .5px; margin: 20px 0;}
+footer{ text-align: center; text-transform: uppercase; font-size: .9em; margin: 20px 0; }
+@import "helpers";
+@import "print";
