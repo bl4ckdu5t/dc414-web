@@ -1,0 +1,12 @@
+# Site settings
+title: DC414 - Your Milwaukee Area Defcon Group
+email: ngharo@dc414.org
+description: > # this means to ignore newlines until "baseurl:"
+  Defcon local group, Milwaukee area, Wisconsin.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://dc414.org" # the base hostname & protocol for your site
+twitter_username: dc414
+github_username:  dc414
+
+# Build settings
+markdown: kramdown

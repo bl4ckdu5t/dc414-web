@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body>
+    <!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. 
+    Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p> 
+    <![endif]-->
+
+    <div class="container">
+      {% include navigation.html %}
+      {% include header.html %}
+      <section class="page">
+        <h1 class="target">Your Milwaukee area Defcon group<span>127.0.0.1</span></h1>
+        {{ content }}
+      </section>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>
