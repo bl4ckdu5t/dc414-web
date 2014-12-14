@@ -1,84 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Defcon local group in Milwaukee, Wisconsin, U.S.A">
-	<meta name="keywords" content="">
-	<meta name="author" content="">
-	<title>DC414 - Your Milwaukee Area Defcon Group</title>
-	<!--[if IE]>
-		<link rel="stylesheet" media="screen, projection" href="stylesheets/ie.css">
-	<![endif]-->
-	<link href='http://fonts.googleapis.com/css?family=Homenaje|Oswald:400,300' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" media="all" href="stylesheets/base.css">
-	<link rel="shortcut icon" href="images/favicon.png">
-</head>
-<body>
-	<!--[if lt IE 7]>
-	<p class="browsehappy">You are using an <strong>outdated</strong> browser. 
-	Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p> 
-	<![endif]-->
-	<div class="container">
-		<nav>
-			<ul>
-				<li><a href="">Home</a></li>
-				<li><a href="">Meetings</a></li>
-				<li><a href="">1337 perks</a></li>
-				<li><a href="">Downloads</a></li>
-				<li>
-					<a href="">Projects</a>
-					<ul>
-						<li>
-							<a href="">SSL Heartbleed</a>
-							<a href="">Protect yourself</a>
-							<a href="">PHP Shadow</a>
-							<a href="">ODiG</a>
-							<a href="">Request Forger</a>
-							<a href="">Email Spoofer</a>
-							<a href="">ENCOSH</a>
-							<a href="">Panel of Lamb</a>
-							<a href="">Fake AP pwnage</a>
-							<a href="">Upnp Exploiter</a>
-						</li>
-					</ul>
-				</li>
-				<li><a href="">Knowldege Base</a></li>
-				<li><a href="">Mailing List</a></li>
-				<li><a href="">Gallery</a></li>
-				<li><a href="">Contact</a></li>
-			</ul>
-		</nav>
-		<header><img src="images/smiley-faded.png" alt="smiley"></header>
-		<section class="page">
-			<h1 class="target">Your Milwaukee area Defcon group<span>127.0.0.1</span></h1>
-			<article>
-				<h2>Barcamp Milwaukee 9</h2>
-				<p>For the ninth consecutive year, BarCampMilwaukee is returning to Bucketworks the first weekend in October. Doors open at 9:00 AM, Saturday October 4th.</p>
-				<p>A BarCamp is a wholly unique event that provides a free, open-environment forum where the participants are in charge of what happens. It is an interactive conversation where professionals and curious alike come to learn, teach, and imagine. This revolutionary “unconference” allows participants to float from one session to another, and encourages the development of interesting ideas and spontaneous discussion. Since the first BarCamp in the US nine years ago, hundreds of BarCamps have been organized throughout the world.</p>
-				<p>Throughout BarCampMilwaukee’s nine year run, participants have been involved in a wide array of session topics ranging from:
-				Software Development: Ruby on Rails, Drupal, and JavaScript.
-				Technologies: 3d printing/scanning, video editing, robots, and solutions for non-profits.
-				Solutions for small businesses and non-profits.
-				All the way to things like Zombie Defense Preparation, lockpicking, sushi making, and many other topics for makers, DIYers, artists and other creatives. please register for BarCampMilwaukee 9 here</p>
-				<p>Bucketworks is a “health club for the brain.” A co-working, meetup, and practice space for creative professionals offering memberships and space rentals for the community. Bucketworks is a program of The School Factory, a 501(c)(3) nonprofit organization that builds value-creating communities and spaces to transform education, economy, and talent.</p>
-				<div class="separator"></div>
-				<h2>March meeting fun</h2>
-				<p>March came in, and was an awesome time. Too bad ngharo and vlad missed it. We were hopping at the <a href="http://meetupery.com/">Meetupery</a></p>
-				<p><img src="images/gallery/IMG_20140307_193546.jpg" alt=""></p>
-				<p>dw5304 got things started with some radio hacking, with his HackerRF board that he’s managed to un-brick.   We swept some bands, and learned that car FOBs generally work around 300mhz for sending signals.  And Chrysler FOBs have some good output!</p>
-				<p><img src="images/gallery/IMG_20140307_203527.jpg" alt=""></p>
-				<p>After that, we had some fun with a giant lock that Klaviel tried his hand at.  This thing is used for some serious security!</p>
-			</article>
-		</section>
-		<footer>copyright &copy; dc414 2012 - <script>var now = new Date(); document.write(now.getFullYear());</script></footer>
-	</div>
-	<!-- JS -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/vendor/jquery-2.1.1.min.js"><\/script>')</script>
-	<script src="js/vendor/blur.min.js"></script>
-	<script src="js/plugins.js"></script>
-	<script src="js/script.js"></script>
-</body>
-</html>
+---
+layout: default
+---
+
+<article>
+    {% for post in site.posts %}
+        <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+        <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
+    {% endfor %}
+</article>
