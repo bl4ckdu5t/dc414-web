@@ -51,6 +51,35 @@ pre {
     }
 }
 
+/**
+ * Icons
+ */
+.icon {
+
+    > svg {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+        margin-right: 10px;
+
+        path {
+            fill: $grey-color;
+        }
+    }
+}
+
+.contact-list,
+.social-media-list {
+    list-style: none;
+    margin-left: 0;
+    padding: 0;
+    text-transform: uppercase;
+    li{
+    	padding-bottom: 10px;
+    }
+}
+
 .container{
 	width: 1200px;
 	margin: 0 auto;
@@ -150,13 +179,14 @@ pre {
 		}
 		p{
 			margin: 10px 0 10px 0;
-			img{
-				display: block;
-				margin: 0 auto;
-				width: 600px;
-				height: auto;
-				border: solid medium rgba(#aaa,.5);
-			}
+		}
+		img{
+			display: block;
+			margin: 0 auto;
+			width: 600px;
+			height: auto;
+			border: solid medium rgba(#aaa,.5);
+			margin-bottom: 10px;
 		}
 		a{
 			color: $defcon-green;
@@ -173,7 +203,7 @@ pre {
 
 	}
 }
-.separator{background: #888; height: .5px; margin: 20px 0;}
+.separator{background: #888; height: 1px; margin: 20px 0;}
 footer{ text-align: center; text-transform: uppercase; font-size: .9em; margin: 20px 0; }
 @import "helpers";
 @import "print";
