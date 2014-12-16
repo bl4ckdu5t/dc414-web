@@ -100,7 +100,7 @@ pre {
 			>li{
 				display: inline-block;
 				position: relative;
-				padding: 3.2px 30px;
+				padding: 3.3px 30px;
 				&:hover > ul{
 					display: block;
 					}
@@ -112,7 +112,7 @@ pre {
 					margin: 0;
 					left: 0;
 					z-index: 1000;
-					top: $nav-height;
+					top: $nav-height - 2px;
 					width: 100%;
 					border: solid thin $defcon-green;
 					border-radius: 0 0 5px 5px;
@@ -204,6 +204,17 @@ pre {
 	}
 }
 .separator{background: #888; height: 1px; margin: 20px 0;}
+.scrollup {
+    width: 32px;
+    height: 32px;
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    display: none;
+    >svg{
+    	fill: $defcon-green;
+    }
+}
 footer{ text-align: center; text-transform: uppercase; font-size: .9em; margin: 20px 0; }
 @import "helpers";
 @import "print";

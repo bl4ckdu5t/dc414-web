@@ -10,4 +10,18 @@ $(document).ready(function(){
 	}).fail(function(){
 		$('.ip-addr').text('0.0.0.0');
 	});
+	/* Scroll back to top function */
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 100) {
+		    $('.scrollup').fadeIn();
+		} else {
+		    $('.scrollup').fadeOut();
+		}
+    });
+    $('.scrollup').click(function () {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 600);
+        return false;
+    });
 });
