@@ -86,7 +86,7 @@ pre {
 	nav{
 		width: 100%;
 		background: rgba($black,.5);
-		height: $nav-height;
+		max-height: $nav-height;
 		border-radius: 0 0 5px 5px;
 		text-shadow: 0 0 15px $defcon-green;
 		border: solid thin $defcon-green;//$border-darktheme;
@@ -148,6 +148,44 @@ pre {
 		}
 	}
 }
+@media (max-width: 1202px){
+	.container{
+		width: 100%;
+	}
+}
+@media (max-width: 410px){
+	header img{
+		width: 100px;
+	}
+}
+@media (max-width: 1048px){
+	.container nav{
+		max-height: $nav-height + 200px;
+		>ul{
+			>li{
+				padding: 5px 20px;
+				width: 49.8%;
+				border-bottom: solid thin $darktheme-inner;
+				&:nth-of-type(odd):not(:last-child){
+					border-right: solid thin $darktheme-inner;
+				}
+				&:hover > ul{
+					display: none;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 745px) {
+	.container.container nav>ul{
+		>li{
+			width: 32%;
+			&:nth-of-type(odd){
+				border-right: 0px none;
+			}
+		}
+	}
+}
 .page{
 	>h1{
 		font-weight: 400;
@@ -183,7 +221,7 @@ pre {
 		img{
 			display: block;
 			margin: 0 auto;
-			width: 600px;
+			max-width: 600px;
 			height: auto;
 			border: solid medium rgba(#aaa,.5);
 			margin-bottom: 10px;
@@ -203,6 +241,18 @@ pre {
 
 	}
 }
+@media (max-width: 612px){
+	.page{
+		article img{
+			max-width: 90%;
+		}
+	}
+}
+@media (max-width: 820px){
+	.page>h1 span{
+		visibility: hidden;
+	}
+}
 .separator{background: #888; height: 1px; margin: 20px 0;}
 .scrollup {
     width: 32px;
@@ -211,9 +261,11 @@ pre {
     bottom: 50px;
     right: 30px;
     display: none;
-    >svg{
-    	fill: $defcon-green;
-    }
+}
+@media (max-width: 1329px){
+	.scrollup{
+		right: 5px;
+	}
 }
 footer{ text-align: center; text-transform: uppercase; font-size: .9em; margin: 20px 0; }
 @import "helpers";
